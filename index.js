@@ -1,4 +1,3 @@
-const botconfig = require("./botconfig.json");
 const Discord = require("discord.js");
 const fs = require("fs");
 const prefix = botconfig.prefix;
@@ -44,4 +43,4 @@ bot.on("message", async message => {
   if (cmd) cmd.run(bot, message, args);
 });
 
-bot.login(botconfig.token);
+bot.login(process.env.BOT_TOKEN);
