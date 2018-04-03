@@ -1,17 +1,15 @@
 const Discord = require("discord.js");
-const ping = require("mc-hermes");
+const mcping = require('mc-ping-updated');
 
 //TODO: Test Ping
 module.exports.run = async (bot, message, args) => {
-  ping({
-    type: 'pc',
-    server: 'play.toxicmc.gq'
-})
-    .then((data)=>{
-        message.channel.send(`Connect using \`play.toxicmc.gq\` \nOnline players: ${data.players.online}`);
-    })
-    .catch(console.error);
-}
+  mcping('mcsrv.toxicmc.gq', 25566, function(err, res) {
+    if (err) {
+      message.channel.send(`ERROR: ${err}`);
+    } else {
+      message.channel.send(`Connect using \`play.toxicmc.gq\`\nThere are currently ${res} players online`)
+    }
+  }
 
 module.exports.help = {
   name: "ip"
