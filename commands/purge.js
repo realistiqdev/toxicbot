@@ -24,5 +24,6 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-  name: "purge"
+  name: "purge",
+  description: "Purge the chat"
 }

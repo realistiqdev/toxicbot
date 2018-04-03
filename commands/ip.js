@@ -15,5 +15,6 @@ module.exports.run = async (bot, message, args) => {
   }
 
 module.exports.help = {
-  name: "ip"
+  name: "ip",
+  description: "Get the server IP and the amount of players online"
 }
