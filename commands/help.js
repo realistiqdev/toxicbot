@@ -3,16 +3,12 @@ const ping = require("mc-hermes");
 
 //TODO: Test Ping
 module.exports.run = async (bot, message, args) => {
-  fs.readdir("./commands/", (err, files) => {
-    if(err) console.log(err);
-
-    let jsfiles = files.filter(f => f.split(".").pop() === "js")
-
-    jsfiles.forEach((f, i) =>{
-      let props = require(`./commands/${f}`);
-      message.channel.send(`\`!${props.help.name}\` - \`${props.help.description}\``)
-    });
-  });
+  var embed=Discord.Embed(title="Help", description="A list of commands", color=0xe9dd52);
+  embed.add_field(name=!mute, value=, inline=True);
+  embed.add_field(name=!unmute, value=, inline=True);
+  embed.add_field(name=!ip, value=, inline=True);
+  embed.add_field(name=!purge, value=, inline=True);
+  message.channel.sendEmbed(embed);
 }
 
 module.exports.help = {
