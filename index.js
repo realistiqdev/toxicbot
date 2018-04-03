@@ -1,3 +1,5 @@
+// ToxicBot by RealDev - A discord bot for www.toxicmc.gq
+// Copyright RealDev 1018
 const Discord = require("discord.js");
 const fs = require("fs");
 var prefix = "!";
