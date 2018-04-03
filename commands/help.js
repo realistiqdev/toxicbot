@@ -13,10 +13,10 @@ module.exports.run = async (bot, message, args) => {
   .setTitle("Help")
   .setDescription("A list of commands")
   .setColor(0xe9dd52)
-  .addField("!mute", "", true)
-  .addField("!unmute", "", true)
-  .addField("!ip", "", true)
-  .addField("!purge", "", true);
+  .addField("!mute", "Mute a member", true)
+  .addField("!unmute", "Unmute a member", true)
+  .addField("!ip", "Get the server info", true)
+  .addField("!purge", "Purge the chat", true);
   message.channel.sendEmbed(embed)
 }
 
