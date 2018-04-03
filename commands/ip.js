@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
     port: '25566'
   })
     .then((data)=>{
-        message.channel.send(`Connect using \`play.toxicmc.gq\` \nOnline players: \`${data.players.online}\``);
+        message.channel.send(`Join \`${data.players.online}\` others at \`play.toxicmc.gq\``);
     })
     .catch(console.error);
   }
