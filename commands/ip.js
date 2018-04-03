@@ -9,7 +9,8 @@ module.exports.run = async (bot, message, args) => {
     } else {
       message.channel.send(`Connect using \`play.toxicmc.gq\`\nThere are currently ${res} players online`)
     }
-  }
+  })
+};
 
 module.exports.help = {
   name: "ip"
