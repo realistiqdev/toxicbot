@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
   .addField("!unmute", "Unmute a member", true)
   .addField("!ip", "Get the server info", true)
   .addField("!purge", "Purge the chat", true);
-  message.channel.sendEmbed(embed)
+  message.channel.send(embed);
 }
 
 module.exports.help = {
