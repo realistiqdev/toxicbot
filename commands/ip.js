@@ -5,8 +5,8 @@ const ping = require("mc-hermes");
 module.exports.run = async (bot, message, args) => {
   ping({
     type: 'pc',
-    server: 'mcsrv.toxicmc.gq',
-    port: '25566'
+    server: '94.23.31.40',
+    port: '25656'
   })
     .then((data)=>{
         message.channel.send(`Join \`${data.players.online}\` others at \`play.toxicmc.gq\``);
