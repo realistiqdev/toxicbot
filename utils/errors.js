@@ -9,5 +9,5 @@ module.exports.noPerms = (message, perm) => {
   .addField("Insufficient Permissions", perm)
   .setColor(config.red);
 
-  message.channel.send(embed).then(m => m.delete(5000));
+  message.channel.send(embed).then(m => m.delete(5000)).catch(console.error);
 }
