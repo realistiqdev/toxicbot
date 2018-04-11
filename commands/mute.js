@@ -1,7 +1,9 @@
 const Discord = require("discord.js");
 const ms = require("ms");
+const errors = require("./utils/errors.js");
 
 module.exports.run = async (bot, message, args) => {
+  if(!message.member.hasPermission("MANAGE_MEMBERS")) return errors.noPerms(message, "MANAGE_MEMBERS");
   let member = message.mentions.members.first();
   if(!member) return message.reply("Please specify a member.");
   let muteRole = message.guild.roles.find("name", "Muted");
